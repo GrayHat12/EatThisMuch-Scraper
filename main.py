@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.chrome.options import Options
 import time
 
 CAL = input("Calories : ")
@@ -9,7 +10,10 @@ if MEALS > 9:
 if MEALS < 1:
     MEALS = 1
 SITE = 'https://www.eatthismuch.com/'
-driver = webdriver.Chrome(executable_path=r"C:\Users\Rahul\PaidProjects\Personal\GrayBot-Uv1\chromedriver.exe")
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+driver = webdriver.Chrome(executable_path=r"C:\Users\Rahul\PaidProjects\Personal\GrayBot-Uv1\chromedriver.exe",options=options)
 driver.get(SITE)
 time.sleep(3)
 driver.find_element_by_id('cal_input').send_keys(CAL)
