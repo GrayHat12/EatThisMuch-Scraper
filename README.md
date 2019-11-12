@@ -19,4 +19,4 @@
  * Now you can simply run the code on the console by typing `python main.py`
 
 # OUTPUT
- ![OUTPUT IMAGE](https://github.com/GrayHat12/EatThisMuch-Scraper/output.png "Sample Output")
+ [OUTPUT IMAGE](output.png "Sample Output")
